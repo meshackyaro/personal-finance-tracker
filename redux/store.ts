@@ -4,10 +4,11 @@ import storage from 'redux-persist/lib/storage';
 import UserSlice from '@/redux/userSlice';
 
 const persistConfig = {
-    key: 'hotels_root',
+    key: 'expense_root',
     storage,
-    whitelist: ['expenses', 'income'],
+    whitelist: ['expense', 'incomes'],
 };
+
 const persistedReducer = persistReducer(persistConfig, UserSlice);
 
 export const store = configureStore({
@@ -18,4 +19,5 @@ export const store = configureStore({
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
+
 export const persist_store = persistStore(store);
