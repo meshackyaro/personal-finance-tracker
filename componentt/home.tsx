@@ -1,4 +1,4 @@
-import Navbar from "@/componentt/Navbar";
+import Navbar from "@/componentt/expense/Navbar";
 
 export default function HomePage(){
     return (
