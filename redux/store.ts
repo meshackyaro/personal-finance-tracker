@@ -8,7 +8,6 @@ const persistConfig = {
     storage,
     whitelist: ['expense', 'incomes'],
 };
-
 const persistedReducer = persistReducer(persistConfig, UserSlice);
 
 export const store = configureStore({
