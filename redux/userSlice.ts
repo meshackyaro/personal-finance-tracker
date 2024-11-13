@@ -6,7 +6,8 @@ const expenses : Expense[]=[]
 
 const initialState:User = {
     expense: expenses,
-    incomes: incomes
+    incomes: incomes,
+    username:''
 }
 const UserSlice = createSlice({
     name:'user',
@@ -17,9 +18,12 @@ const UserSlice = createSlice({
         },
         addExpenses(state, action:PayloadAction<Expense>){
             state.expense.push(action.payload)
+        },
+        setUsername(state, action:PayloadAction<string>){
+            state.username = action.payload
         }
     }
 
 })
-export const {setBaseUrl} = UserSlice.actions;
+export const {addIncome,addExpenses,setUsername} = UserSlice.actions;
 export default UserSlice.reducer;

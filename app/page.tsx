@@ -1,6 +1,6 @@
-import Home from '@/componentt/home'
+import HomePage from '@/componentt/home'
 export default function Home() {
   return (
-     <Home/>
+     <HomePage/>
   );
 }

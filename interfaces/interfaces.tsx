@@ -6,5 +6,6 @@ export interface Income{
 }
 export interface User{
     expense: Expense[],
-    incomes:Income[]
+    incomes:Income[],
+    username:string
 }
