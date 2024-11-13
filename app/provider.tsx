@@ -14,6 +14,7 @@ export default function Providers({children}: ProviderProps){
             <PersistGate persistor={persist_store}>
                 {children}
             </PersistGate>
+
         </Provider>
     )
 }
