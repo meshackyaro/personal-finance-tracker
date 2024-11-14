@@ -1,8 +1,8 @@
 import {createSlice, PayloadAction,} from "@reduxjs/toolkit";
-import {Expense, Income, User} from "@/interfaces/interfaces";
+import {Transaction, User} from "@/interfaces/interfaces";
 
-const incomes : Income[]=[]
-const expenses : Expense[]=[]
+const incomes : Transaction[]=[]
+const expenses : Transaction[]=[]
 
 const initialState:User = {
     expense: expenses,
@@ -13,10 +13,10 @@ const UserSlice = createSlice({
     name:'user',
     initialState,
     reducers:{
-        addIncome(state,action:PayloadAction<Income>){
+        addIncome(state,action:PayloadAction<Transaction>){
             state.incomes.push(action.payload)
         },
-        addExpenses(state, action:PayloadAction<Expense>){
+        addExpenses(state, action:PayloadAction<Transaction>){
             state.expense.push(action.payload)
         },
         setUsername(state, action:PayloadAction<string>){

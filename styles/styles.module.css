@@ -6,3 +6,6 @@
 .text{
     @apply justify-center items-center p-[10px_5px] cursor-pointer font-[700];
 }
+.modal{
+    background: rgba(0, 0, 0, 0.5);
+}
