@@ -1,11 +1,19 @@
-export interface Expense{
-
+export interface Transaction{
+    price: number,
+    date: Date,
+    description: string
 }
-export interface Income{
 
-}
+// export interface Expense extends Transaction{
+
+// }
+
+// export interface Income extends Transaction{
+
+// }
+
 export interface User{
-    expense: Expense[],
-    incomes:Income[],
+    expense: Transaction[],
+    incomes:Transaction[],
     username:string
 }
